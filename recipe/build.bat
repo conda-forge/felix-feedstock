@@ -1,3 +1,6 @@
+set CARGO_PROFILE_RELEASE_STRIP=symbols
+set CARGO_PROFILE_RELEASE_LTO=fat
+
 :: check licenses
 cargo-bundle-licenses ^
     --format yaml ^
@@ -7,7 +10,7 @@ cargo-bundle-licenses ^
 cargo install --bins --no-track --locked --root %LIBRARY_PREFIX% --path . || goto :error
 
 :: avoid conflict with other binaries named fx
-mv %LIBRARY_PREFIX%\bin\fx.exe %LIBRARY_PREFIX%\bin\felix.exe || goto :error
+move %LIBRARY_PREFIX%\bin\fx.exe %LIBRARY_PREFIX%\bin\felix.exe || goto :error
 
 goto :EOF
 
