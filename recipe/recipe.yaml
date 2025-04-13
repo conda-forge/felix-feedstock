@@ -1,5 +1,5 @@
 context:
-  version: "2.16.0"
+  version: "2.16.1"
 
 package:
   name: felix
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/kyoheiu/felix/archive/v${{ version }}.tar.gz
-  sha256: 9fb0a1b120e3171883c8150792808e6871d052190ed8b9bcb0807970545285c6
+  sha256: a001dfe81cdbdfa19ba653a4711a17e4c92aa528139739c895df5791a26ea9f5
 
 build:
   number: 0
